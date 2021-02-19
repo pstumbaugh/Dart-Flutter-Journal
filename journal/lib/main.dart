@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                 PopupMenuButton<String>(
                   onSelected: handleClick,
                   itemBuilder: (BuildContext context) {
-                    return {'Dark Mode'}.map((String choice) {
+                    return {'Toggle Dark Mode'}.map((String choice) {
                       return PopupMenuItem<String>(
                         value: choice,
                         child: Text(choice),
@@ -52,10 +52,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 void handleClick(String value) {
-  switch (value) {
-    case 'Dark Mode':
-      currentTheme.switchTheme();
-  }
+  currentTheme.switchTheme();
 }
 
 class MyTheme with ChangeNotifier {
