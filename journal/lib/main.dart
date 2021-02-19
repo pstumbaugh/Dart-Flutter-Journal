@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:journal/widgets/journal_entry_form.dart';
+import './screens/journal_entries.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-            appBar: AppBar(title: Text('Journal')), body: JournalEntryForm()));
+            appBar: AppBar(title: Text('Journal')),
+            body: JournalEntriesScreen()));
   }
 }
